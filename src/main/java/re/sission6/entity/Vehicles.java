@@ -1,5 +1,6 @@
 package re.sission6.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,13 +18,14 @@ public class Vehicles {
     //Trường: id, licensePlate (biển số xe), color (màu sắc), type (loại xe: CAR, BIKE - sử dụng Enum).
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     @Column(length = 100, nullable = false)
     private String licensePlate;
     @Column(length = 100, nullable = false)
     private String color;
     @Column(length = 100, nullable = false)
     private String type;
+    @JsonIgnore
     @OneToMany(mappedBy = "vehicle")
     private List<ParkingTickets> parkingTickets;
 }

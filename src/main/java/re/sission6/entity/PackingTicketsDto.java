@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,8 +14,8 @@ import java.time.LocalDate;
 @Getter
 public class PackingTicketsDto {
     private int id ;
-    private LocalDate checkin;
-    private LocalDate checkout;
+    private LocalDateTime checkin;  // ✅ Sửa
+    private LocalDateTime checkout; // ✅ Sửa
     private int vehicle;
     private int zone;
 }

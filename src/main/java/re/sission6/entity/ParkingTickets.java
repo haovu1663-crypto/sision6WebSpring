@@ -14,9 +14,10 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 public class ParkingTickets {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     @Column(length = 100, nullable = false)
     private LocalDateTime checkIn;
     @Column(length = 100, nullable = true)
