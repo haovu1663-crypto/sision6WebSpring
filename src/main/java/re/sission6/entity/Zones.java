@@ -15,7 +15,7 @@ import java.util.List;
 @Setter
 @Getter
 public class Zones {
-    //Trường: id, name (tên khu vực), capacity (sức chứa tối đa), occupiedSpots (số chỗ đã dùng)
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
